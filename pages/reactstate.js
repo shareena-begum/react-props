@@ -28,21 +28,61 @@ import React from "react"
 //     }
 // }
 
-function handleClick(){
-    console.log("I was clicked!")
+// function handleClick(){
+//     console.log("I was clicked!")
+// }
+
+// function Reactstate(){
+//     return(
+//         <div>
+//             <img onMouseOver={() => console.log("Hovered!")}
+//              src="https://www.fillmurray.com/300/200" />
+//             <br />
+//             <br />
+//             <button onClick={handleClick}>Click me</button>
+//         </div>
+//     )
+// }
+
+class Reactstate extends React.Component {
+    constructor(){
+        super()
+        this.state={
+            count: 0
+        }
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick(){
+       this.setState(prevState => {
+           return {
+               count: prevState.count + 1
+           }
+       }) 
+    }
+
+    render(){
+        return(
+            <div style={{textAlign: "center"}}>
+                <h1>{this.state.count}</h1>
+                <button onClick={this.handleClick}>Change!</button>
+            </div>
+        )
+    }
+   
 }
 
-function Reactstate(){
-    return(
-        <div>
-            <img onMouseOver={() => console.log("Hovered!")}
-             src="https://www.fillmurray.com/300/200" />
-            <br />
-            <br />
-            <button onClick={handleClick}>Click me</button>
-        </div>
-    )
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 export default Reactstate
