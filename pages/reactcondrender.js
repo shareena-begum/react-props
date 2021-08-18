@@ -20,7 +20,9 @@ class reactcondrender extends React.Component {
     render(){
         return(
             <div>
-            <Conditional isLoading={this.state.isLoading}  />
+                {this.state.isLoading ? 
+                <h1>Shanna...</h1> :
+                <Conditional />}
             </div>
         )
     }
