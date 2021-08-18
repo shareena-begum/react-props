@@ -45,7 +45,7 @@ class count extends React.Component{
 
     render(){
         return (
-            <div>
+            <div style={{textAlign: "center"}} >
                 <h1 style={{color: this.state.color}}>{this.state.count}</h1>
                 <button onClick={this.increment} >Increment!</button>
                 <button onClick={this.decrement} >Decrement!</button>
