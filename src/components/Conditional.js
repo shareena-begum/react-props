@@ -1,15 +1,13 @@
 import React from "react"
 
 function Conditional(props) {
-    if(props.isLoading === true ){
-        return (
-            <h1>Shanna...</h1>
-        )
-    } else {
-        return(
-            <h1>...is very beautiful and brilliant girl</h1>
-        )
-    }
+     // condition ? statement if true : statement if false
+     return(
+         <div>
+             {props.isLoading ? <h1>Shanna...</h1> : <h1>...is very beautiful and brilliant girl</h1>}
+         </div>
+        
+     )    
 }
 
 
