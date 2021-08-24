@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-class form extends React.Component{
-    constructor(){
+class form extends Component{
+    constructor() {
         super()
         this.state = {
            firstName: "",
@@ -11,13 +11,14 @@ class form extends React.Component{
     }
 
     handleChange(event) {
+        const {name, value} = event.target
         this.setState({
-            [event.target.value]: event.target.value
+            [name]: value
         }) 
     }
 
     render() { 
-    return(
+     return(
         <form>
             <input 
                 type="text" 
@@ -28,7 +29,8 @@ class form extends React.Component{
                 /> 
                 <br/>
             <input 
-                type="text" vlaue={this.state.lastName} 
+                type="text" 
+                vlaue={this.state.lastName} 
                 name="lastName" 
                 placeholder="Last Name" 
                 onChange={this.handleChange} 
