@@ -5,24 +5,47 @@ class reactcondrender extends React.Component {
     constructor(){
         super()
         this.state = {
-          isLoading: true
+        //   isLoading: true
+        loading: false,
+        character: {}
         }   
     }
 
-    componentDidMount(){
-        setTimeout( () => {
+    // componentDidMount(){
+    //     setTimeout( () => {
+    //         this.setState({
+    //             isLoading: false
+    //         })
+    //     }, 1500)
+    // }
+
+    // render(){
+    //     return(
+    //         <div>
+    //             {this.state.isLoading ?  
+    //             <h1>Shanna...</h1> :
+    //             <Conditional />}
+    //         </div>
+    //     )
+    // }
+
+    componentDidMount() {
+        this.setState({loading: true})
+        fetch("https://swapi.co/api/people/1")
+        .then(response => response.json())
+        .then(data => {
             this.setState({
-                isLoading: false
+                loading: false,
+                character: data
             })
-        }, 1500)
+        })
     }
 
-    render(){
-        return(
+    render() {
+        const text = this.state.loading ? "loading..." : this.state.character.name
+        return (
             <div>
-                {this.state.isLoading ?  
-                <h1>Shanna...</h1> :
-                <Conditional />}
+                <p>{text}</p>
             </div>
         )
     }
