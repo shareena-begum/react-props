@@ -7,7 +7,7 @@ class form extends Component{
            firstName: "",
            lastName: ""
         }
-        this.handlChange = this.handleChange.bind(this)
+        this.handleChange = this.handleChange.bind(this)
     }
 
     handleChange(event) {
@@ -22,7 +22,7 @@ class form extends Component{
         <form>
             <input 
                 type="text" 
-                vlaue={this.state.firstName} 
+                value={this.state.firstName} 
                 name="firstName" 
                 placeholder="First Name" 
                 onChange={this.handleChange} 
@@ -30,7 +30,7 @@ class form extends Component{
                 <br/>
             <input 
                 type="text" 
-                vlaue={this.state.lastName} 
+                value={this.state.lastName} 
                 name="lastName" 
                 placeholder="Last Name" 
                 onChange={this.handleChange} 
