@@ -9,17 +9,16 @@ class formprac extends Component{
             age: "",
             gender: "",
             destination: "",
-            dietaryRestrictions: []
-
+            isVegan: false,
+            isKosher: false,
+            isLactoseFree: false
         }
         this.handleChange = this.handleChange.bind(this)
     }
 
     handleChange(event){
-        const {name,value} = event.target
-        this.setState({
-            [name]: value
-        })
+        const {name,value, type, checked} = event.target
+        type === "checkbox" ?  this.setState({ [name]: checked }) : this.setState({ [name]: value })
 }
     render(){
     return(
@@ -68,6 +67,53 @@ class formprac extends Component{
                </label>
                <br />
 
+               <select 
+                    vlaue={this.state.destination} 
+                    name="destination" 
+                    onChange={this.handleChange} >
+                        <option value="">-- Please Choose a destinstion</option>
+                        <option value="manali">Manali</option>
+                        <option value="shimla">Shimla</option>
+                        <option value="dehradun">Dehradun</option>
+                        <option value="kerala">Kerala</option>
+                        <option value="ooty">Ooty</option>
+               </select>
+
+               <br />
+
+               <label>
+                   <input 
+                   type="checkbox"
+                   name="isVegan"
+                   onChange={this.handleChange}
+                   checked={this.state.isVegan}
+                   /> Vegan?
+               </label>
+
+               <br />
+
+               <label>
+                   <input 
+                   type="checkbox"
+                   name="isKosher"
+                   onChange={this.handleChange}
+                   checked={this.state.isKosher}
+                   /> Kosher?
+               </label>
+
+               <br />
+
+               <label>
+                   <input 
+                   type="checkbox"
+                   name="isLactoseFree"
+                   onChange={this.handleChange}
+                   checked={this.state.isLactoseFree}
+                   /> Lactose Free?
+               </label>
+
+               <br />
+
 
 
 
@@ -89,9 +135,12 @@ class formprac extends Component{
                <h2>Entered Information:</h2>
                <p>Your name: {this.state.firstName} {this.state.lastName}</p>
                <p>Your age: {this.state.age}</p>
-               <p>Your gender: {}</p>
-               <p>Your destination: {}</p>
-               <p>Your destination: {}</p>
+               <p>Your gender: {this.state.gender}</p>
+               <p>Your destination: {this.state.destination}</p>
+               <p>Your destination:</p>
+               <p>Vegan: {this.state.isVegan ? "Yes" : "No"}</p>
+               <p>Kosher: {this.state.isKosher  ? "Yes" : "No"}</p>
+               <p>Lactose Free: {this.state.isLactoseFree  ? "Yes" : "No"}</p>
        </main>
     )
    }
