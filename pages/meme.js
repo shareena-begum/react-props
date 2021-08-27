@@ -1,8 +1,14 @@
 import React from "react"
+import Header from "../src/Meme/Header"
+import MemeGenerator from "../src/Meme/MemeGenerator"
+// import "./meme.module.css"
 
 function meme(){
     return(
-        <h1>Hello World!</h1>
+        <div>
+            <Header />
+            <MemeGenerator />
+        </div>
     )
 }
 
