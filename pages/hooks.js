@@ -3,12 +3,22 @@ import React, {useState} from "react"
 function hooks() {
     const [inputData, setInputData] = useState({firstName: "", lastName: ""})
     const [contactData, setContactsData] = useState([])
-    console.log("inputData")
+    
     function handleChange(event) {
-
+        const {name, value} = event.target
+        setInputData(prevInputData =>  ({...prevInputData, [name]: value}))
     }
+
+    function handleSubmit(event) {
+        event.preventDefault()
+        setContactsData(prevContacts => [...prevContacts, inputData])
+    }
+    
+    const contacts = contactsData.map(contact => <h2 key={contact.firstName + contact.lastName}>{contact.firstName} {contact.lastName}</h2>)
+
     return (
-        <form>
+        <>
+        <form onSubmit={handleSubmit}>
             <input
                 placeholder="First Name"
                 name="firstName" 
@@ -26,6 +36,8 @@ function hooks() {
 
                 <button>Add Contact</button>
         </form>
+        {contacts}
+        </>
     )
 }
 
