@@ -2,7 +2,7 @@ import React, {useState} from "react"
 
 function hooks() {
     const [inputData, setInputData] = useState({firstName: "", lastName: ""})
-    const [contactData, setContactsData] = useState([])
+    const [contactsData, setContactsData] = useState([])
     
     function handleChange(event) {
         const {name, value} = event.target
