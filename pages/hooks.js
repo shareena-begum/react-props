@@ -1,11 +1,11 @@
 import React, {useState} from "react"
 
 function hooks() {
-    const [inputData, setInputData] = useState({firstName: "", lastName: ""})
+    const [inputData, setInputData] = useState({firstName: "", lastName: "", checked: "male", checked: "female" })
     const [contactsData, setContactsData] = useState([])
     
     function handleChange(event) {
-        const {name, value} = event.target
+        const {name, value, checked} = event.target
         setInputData(prevInputData =>  ({...prevInputData, [name]: value}))
     }
 
@@ -25,6 +25,7 @@ function hooks() {
                 value= {inputData.firstName}
                 onChange={handleChange}
                 />
+                <br/>
 
             <input
                 placeholder="Last Name"
@@ -33,6 +34,26 @@ function hooks() {
                 onChange={handleChange}
                 />
                 <br />
+                <label>
+                <input
+                    type="radio"
+                    name="gender"
+                    value="male"
+                    checked={inputData.male} 
+                    onChange={handleChange}
+                    /> Male
+            </label>  
+             <br/>
+            <label>
+                <input
+                    type="radio"
+                    name="gender"
+                    value="female"
+                    checked={inputData.female} 
+                    onChange={handleChange}
+                    /> Female
+            </label> 
+            <br />
 
                 <button>Add Contact</button>
         </form>
