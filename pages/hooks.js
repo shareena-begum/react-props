@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import randomcolor from "randomcolor"
 
 // function hooks() {
 //     const [inputData, setInputData] = useState({firstName: "", lastName: "", checked: "male", checked: "female" })
