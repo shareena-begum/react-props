@@ -17,7 +17,7 @@ a {
 
 
 
-/* meme */
+/* meme
 
 * {
   box-sizing: border-box;
@@ -33,23 +33,23 @@ header {
   display: flex;
   align-items: center;
   background: #6441A5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+  /* background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+ /* background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* } */ 
 
-header > img {
+/* header > img {
   height: 80%;
   margin-left: 10%;
 }
-
+ 
 header > p {
   font-family: VT323, monospace;
   color: whitesmoke;
   font-size: 50px;
   margin-left: 60px;
-}
+} */
 
-.meme {
+/* .meme {
   position: relative;
   width: 90%;
   margin: auto;
@@ -114,30 +114,30 @@ header > p {
 }
 
 .meme-form > input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-font-family: VT323, monospace;
+/* font-family: VT323, monospace;
 font-size: 25px;
-text-align: cen
-}
+text-align: cen */
+/* }
 .meme-form > input::-moz-placeholder { /* Firefox 19+ */
-font-family: VT323, monospace;
+/* font-family: VT323, monospace;
+font-size: 25px;
+text-align: cen */
+/* } */
+/* .meme-form > input:-ms-input-placeholder { IE 10+ */
+/* font-family: VT323, monospace;
+font-size: 25px;
+text-align: cen */
+/* } */
+/* .meme-form > input:-moz-placeholder { Firefox 18- */
+/* font-family: VT323, monospace;
 font-size: 25px;
 text-align: cen
-}
-.meme-form > input:-ms-input-placeholder { /* IE 10+ */
-font-family: VT323, monospace;
-font-size: 25px;
-text-align: cen
-}
-.meme-form > input:-moz-placeholder { /* Firefox 18- */
-font-family: VT323, monospace;
-font-size: 25px;
-text-align: cen
-}
+}  */
 
 
 /* hooks */
 
-.hooks {
+/* .hooks {
   text-align: center;
   color:rgb(167, 36, 167);
 }
@@ -158,7 +158,7 @@ h3 {
 
 /* movie search app */
 
-html {
+/* html {
   font-size: 10px
 }
  
@@ -169,7 +169,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(244,244,244);
+  background-color: rgb(247, 240, 240);
   color: #333;
 }
 
@@ -257,4 +257,13 @@ small {
 .card--image {
   margin: 0 auto;
   display: block;
+}  */ 
+
+/* cooking blog */
+
+header {
+  text-align: center;
+  color:#c8b5d8;
+  background-color: rgb(19, 80, 133);
+  margin: o auto;
 }
