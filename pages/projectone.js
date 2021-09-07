@@ -18,6 +18,7 @@ class projectone extends Component {
         return (
             <div className="container ">
                <Header />
+               <Main />
             </div>
         )
     }

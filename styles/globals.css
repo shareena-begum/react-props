@@ -260,10 +260,42 @@ small {
 }  */ 
 
 /* cooking blog */
+body {
+  background-color: #efefef;
+  
+}
 
 header {
   text-align: center;
-  color:#c8b5d8;
-  background-color: rgb(19, 80, 133);
-  margin: o auto;
+  color:rgb(121, 9, 9);
+  margin: 0 auto;
+  padding: 15px;
+  font-size: larger;
+  font-style: normal;
+  background-color: white;
+  
+}
+
+h1 {
+  font-weight: 600;
+  text-shadow: 2px 2px 2px #be9d9d;
+}
+
+.card {
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(223, 156, 156, 0.25);
+  margin: 2rem;
+  background-color: white;
+}
+
+.food-image {
+  border-radius: 50px;
+  width: 200px;
+  height: 200px;
+} 
+
+.less-famous {
+  display: flex;
+  justify-content: space-between;
 }
