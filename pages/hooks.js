@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import randomcolor from "randomcolor"
 
 // function hooks() {
@@ -63,12 +63,15 @@ import randomcolor from "randomcolor"
 //     )
 // }
 
+// componentDidMount
+// componentDidUpdate
+// componentWillUnmount: useEffect replaces these three lifecycle methods
 
 
 
-
-function hooks(){
-    const [count, setCount] = useState(0)
+function hooks() {
+const [count, setCount] = useState(0)
+const [color, setColor] = useState("")
 
     function increment() {
         setCount(prevCount => prevCount + 1)
@@ -78,14 +81,21 @@ function hooks(){
         setCount(prevCount => prevCount - 1)
     }
 
+    useEffect ( () => {
+        setColor(randomcolor())
+    }, [count])
+
     return(
-        <div className="hooks">
-            <h1>{count}</h1>
-            <button onClick= {increment}>INCREMENT!</button> <br />
-            <button onClick= {decrement}>DECREMENT! </button>
+        <div>
+            <h1 style= {{color: color}} >{count}</h1>
+            <button onClick={increment}>INCREMENT</button> <br/>
+            <button onClick={decrement}>DECREMENT</button>
         </div>
     )
 }
+
+
+
 
 
 // function hooks() {
