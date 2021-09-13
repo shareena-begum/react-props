@@ -87,7 +87,7 @@ const [color, setColor] = useState("")
 
     return(
         <div>
-            <h1 style= {{color: color}} >{count}</h1>
+            <h1 style={{color: color}}>{count}</h1>
             <button onClick={increment}>INCREMENT</button> <br/>
             <button onClick={decrement}>DECREMENT</button>
         </div>
