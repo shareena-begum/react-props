@@ -3,7 +3,7 @@ import React from "react"
 function dietary() {
     return(
         <div>
-            <h3>It's a dietary products blog</h3>
+            <h3>It's a dietary farm</h3>
         </div>
        
     )
