@@ -260,7 +260,7 @@ small {
 }  */ 
 
 /* cooking blog */
-body {
+/* body {
   background-color: #efefef;
   
 }
@@ -298,4 +298,12 @@ h1 {
 .less-famous {
   display: flex;
   justify-content: space-between;
+} */
+
+/* React-children */
+
+.border {
+  margin: 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
 }
