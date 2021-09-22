@@ -300,10 +300,23 @@ h1 {
   justify-content: space-between;
 } */
 
-/* React-children */
+/* React-children
 
 .border {
   margin: 10px;
   border: 1px solid blue;
   border-radius: 5px;
+} */
+
+/* callout */
+
+main > h1 {
+  text-align: center;
+}
+
+.callout{
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 20px;
+  background-color: #C0FFFE;
 }
