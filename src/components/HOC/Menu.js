@@ -18,4 +18,4 @@ class Menu extends Component {
     }
 }
 
-export default withToggler (Menu)
+export default withToggler(Menu)
