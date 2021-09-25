@@ -320,3 +320,13 @@ main > h1 {
   padding: 20px;
   background-color: #C0FFFE;
 }
+
+/* Dairy */
+
+.dairyform {
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(209, 181, 181, 0.25);
+  margin: 2rem;
+  background-color: white;
+}

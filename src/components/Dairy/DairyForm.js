@@ -30,7 +30,7 @@ class DairyForm extends Component {
                     <li>Can squeeze the milk</li>
                     <li>Can make food for animals</li>
                 </ul>
-                <form onSubmit={this.handleSubmit}>
+                <form className="dairyform" onSubmit={this.handleSubmit}>
                 <label>Name:</label>
                 <input
                  type="text"
@@ -55,7 +55,7 @@ class DairyForm extends Component {
                  name="experienced"
                  checked={this.state.experienced}
                  onChange={this.handleChange}
-                 /> Experienced in a nimal husbandry
+                 /> Experienced in animal husbandry
                     </label> 
                  <br />
 
