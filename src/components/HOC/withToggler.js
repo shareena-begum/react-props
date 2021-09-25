@@ -5,7 +5,7 @@ import React, {Component} from "react"
 // and "supercharging" it by giving it some extra abilities
 
 class Toggler extends Component {
-    state= {
+    state = {
         on: false
     }
 
@@ -29,7 +29,7 @@ class Toggler extends Component {
 export function withToggler(component) {
     return function(props) {
         return (
-            <Toggler componnet={component} {...props} />
+            <Toggler component={component} {...props} />
         )
     }
 }
