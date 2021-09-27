@@ -4,7 +4,7 @@ class DairyForm extends Component {
     constructor(){
         super()
         this.state = {
-            fullname: "",
+            fullName: "",
             emailId: "",
             experienced: false,
             gender: "",
@@ -34,7 +34,7 @@ class DairyForm extends Component {
                 <label>Name:</label>
                 <input
                  type="text"
-                 value={this.state.fullname}
+                 value={this.state.fullName}
                  onChange={this.handleChange}
                  placeholder="Full Name"
 
