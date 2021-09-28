@@ -1,12 +1,11 @@
-import React, {Component} from "react"
+import React from "react"
 import { withToggler } from "./withToggler"
 
-class Menu extends Component {
-    render() {
+function Menu (props) {
         return (
             <div>
-                <button onClick={this.props.toggle}>{this.props.on ? "Hide" : "Show"} Menu </button>
-                <nav style={{display: this.props.on ? "block" : "none"}}>
+                <button onClick={props.toggle}>{props.on ? "Hide" : "Show"} Menu </button>
+                <nav style={{display: props.on ? "block" : "none"}}>
                     <h6>Signed in as Coder123</h6>
                     <a>Your Profile</a>
                     <a>Your Repositories</a>
@@ -15,7 +14,6 @@ class Menu extends Component {
                 </nav>
             </div>
         ) 
-    }
 }
 
-export default withToggler(Menu)
+export default withToggler(Menu, {defaultOnValue: true} )
