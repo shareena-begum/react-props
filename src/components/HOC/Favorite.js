@@ -5,7 +5,7 @@ function Favorite(props) {
         return (
             <Toggler  
               render = {
-                (on, toggle) => (
+                ({on, toggle}) => (
                         <div>
                             <h3>Click heart to favorite</h3>
                             <h1>
