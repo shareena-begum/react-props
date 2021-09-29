@@ -5,9 +5,9 @@ function renderprops() {
   return (
       <div>
           <RenderProps render={
-            function(isDaytime) {
+            function(number) {
               return (
-              <h1> {isDaytime ? "Good Day" : "Good Night"} </h1> 
+              <h1> {number >=0 ? "Positive" : "Negative"} </h1> 
               )
               }
             }/>

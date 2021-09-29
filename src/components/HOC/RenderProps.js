@@ -3,7 +3,7 @@ import React from "react"
 function RenderProps(props) {
     return (
         <div>
-           {props.render(true)}
+           {props.render(+36)}
         </div> 
     ) 
 }
