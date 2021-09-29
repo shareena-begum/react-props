@@ -5,11 +5,14 @@ function renderprops() {
   return (
       <div>
           <RenderProps render={
-            function(number) {
+            function(bool, number) {
               return (
-              <h1> {number >=0 ? "Positive" : "Negative"} </h1> 
+                <div>
+                  <h1> {number} </h1>
+                  <h1> {bool ? "true" : "false"} </h1>
+                </div>
               )
-              }
+            }
             }/>
       </div>
   )
