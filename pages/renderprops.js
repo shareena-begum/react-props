@@ -4,7 +4,13 @@ import RenderProps from "../src/components/HOC/RenderProps"
 function renderprops() {
   return (
       <div>
-          <RenderProps name={function() {return <h1>Hey there</h1> }}  />
+          <RenderProps render={
+            function(isDaytime) {
+              return (
+              <h1> {isDaytime ? "Good Day" : "Good Night"} </h1> 
+              )
+              }
+            }/>
       </div>
   )
 }
