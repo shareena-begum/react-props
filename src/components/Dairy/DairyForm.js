@@ -4,7 +4,7 @@ class DairyForm extends Component {
     constructor(){
         super()
         this.state = {
-            fullName: "",
+            name: "",
             emailId: "",
             experienced: false,
             gender: "",
@@ -24,6 +24,7 @@ class DairyForm extends Component {
                 <p>Wants to share your knowledge of diary farming, then your just a 
                     step back to get yourself into the world of S.M. Dairy Farm. 
                     Before you register read the following requirements</p>
+                    {/* toggler function */}
                 <ul>
                     <li>Can communicate with cows, buffaloes, sheeps</li>
                     <li>Can wash and clean them</li>
@@ -34,7 +35,7 @@ class DairyForm extends Component {
                 <label>Name:</label>
                 <input
                  type="text"
-                 value={this.state.fullName}
+                 value={this.state.name}
                  onChange={this.handleChange}
                  placeholder="Full Name"
 
@@ -43,7 +44,7 @@ class DairyForm extends Component {
                  <label>Email:</label>
                 <input 
                  type="text"
-                 value={this.state.emailId}
+                 value={this.state.name}
                  placeholder="Email Id"
                  onChange={this.handleChange}
                  />
