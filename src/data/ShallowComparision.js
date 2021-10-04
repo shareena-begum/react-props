@@ -56,3 +56,16 @@ const state2 = {
 // 3. recieves the upcoming props and state so you can compare them against current props and state.
 // 4. return true for yes, and false for no
 // Don't do deep equality checks in here
+
+
+// React.PureComponent
+// 1. Alternative to React.Component
+// 2. Automatically implements shouldcomponentupdate() for shallow props and state comparisons
+// 3. Disallows using shouldcomponentupdate() manually
+// 4. Skips rendering all children in the tree suromatically, so they mus be 'pure' as well
+// 5. Generally preferred over shouldcomponentupdate()
+
+
+
+
+
