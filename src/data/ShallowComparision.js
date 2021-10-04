@@ -2,6 +2,8 @@
 // Primitive types (strings, numbers, booleans)
 // console.log("Hi" === "Hi") ——— true
 
+const { Component, PureComponent } = require("react")
+
 // Complex types (array, object)
 // console.log({name: "Joe"} === {name: "Joe"}) ——— false
 
@@ -64,6 +66,14 @@ const state2 = {
 // 3. Disallows using shouldcomponentupdate() manually
 // 4. Skips rendering all children in the tree suromatically, so they mus be 'pure' as well
 // 5. Generally preferred over shouldcomponentupdate()
+
+// React.memo ()
+// 1. Higher-order Component built by React
+// 2.pretty much the same as PureComponent, but for functional components
+// 3. it only compare prevprops and nextprops (no state checking)
+// you can optionally implement your own checking function to determine if it should use the memorized result
+// => the function is kind of like shouldcomponentupdate(), except it should return true if the props are equal and false if they aren't. 
+// this effectively the opposite approach of shouldcomponentupdate, which returns true if component should re-render (i.e., props are different)
 
 
 
