@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useRef} from "react"
 
 function useRef() {
     const [newTodoValue, setNewTodoValue] = useState("")
@@ -13,7 +13,7 @@ function useRef() {
         event.preventDefault()
         setTodosList(prevTodosList => [...prevTodosList, newTodoValue])
         setNewTodoValue("")
-        inputRef.current.focus()
+        inputRef.focus()
     }
     
     const allTodos = todosList.map(todo => <p key={todo}>{todo}</p>)
